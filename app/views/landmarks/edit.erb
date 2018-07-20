@@ -2,7 +2,7 @@
 
 <form action="/landmarks/<%=@landmark.id%>" method="POST">
   <input type="hidden" name="_method" value="PATCH">
-  <label>Landmark Name: </label><input type="text" name="landmark[name]" id="name">
-  <label>Landmark Year Completed: </label><input type="text" name="landmark[year_completed]" id="year_completed">
+  <label>Landmark Name (current: <%=@landmark.name%>): </label><input type="text" name="landmark[name]" id="name">
+  <label>Landmark Year Completed (current: <%=@landmark.year_completed.to_s%>): </label><input type="text" name="landmark[year_completed]" id="year_completed">
   <input type="submit" value="Edit Landmark">
 </form>
